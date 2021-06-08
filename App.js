@@ -39,33 +39,39 @@ var AR_NAVIGATOR_TYPE = "AR";
 var defaultNavigatorType = UNSET;
 
 export default class ViroSample extends Component {
-  // constructor() {
-  //   super();
+  constructor() {
+    super();
 
-  //   this.state = {
-  //     navigatorType : defaultNavigatorType,
-  //     sharedProps : sharedProps
-  //   }
-  //   this._getExperienceSelector = this._getExperienceSelector.bind(this);
-  //   this._getARNavigator = this._getARNavigator.bind(this);
-  //   this._getVRNavigator = this._getVRNavigator.bind(this);
-  //   this._getExperienceButtonOnPress = this._getExperienceButtonOnPress.bind(this);
-  //   this._exitViro = this._exitViro.bind(this);
-  // }
+    this.state = {
+      navigatorType: defaultNavigatorType,
+      sharedProps: sharedProps,
+      currentScreen: "LoginScreen",
+    };
+    // this._getExperienceSelector = this._getExperienceSelector.bind(this);
+    // this._getARNavigator = this._getARNavigator.bind(this);
+    // this._getVRNavigator = this._getVRNavigator.bind(this);
+    // this._getExperienceButtonOnPress =
+    //   this._getExperienceButtonOnPress.bind(this);
+    // this._exitViro = this._exitViro.bind(this);
+  }
 
   // Replace this function with the contents of _getVRNavigator() or _getARNavigator()
   // if you are building a specific type of experience.
   render() {
     // if (this.state.navigatorType == UNSET) {
-
-    return (
-      <View style={styles.container}>
-        {/* <Text>Open up App.js to start working on your app!</Text> */}
-        <LoginScreen />
-        {/* <StatusBar style="auto" /> */}
-      </View>
-    );
-
+    if (this.state.currentScreen === "LoginScreen") {
+      return (
+        <View style={styles.container}>
+          <LoginScreen />
+        </View>
+      );
+    } else {
+      return (
+        <View style={styles.container}>
+          <Text>Another Screen</Text>
+        </View>
+      );
+    }
     // return this._getExperienceSelector();
     // }
 
