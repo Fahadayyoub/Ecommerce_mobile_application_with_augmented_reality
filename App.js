@@ -18,7 +18,7 @@ import {
 } from "react-native";
 
 import { ViroVRSceneNavigator, ViroARSceneNavigator } from "react-viro";
-
+import LoginScreen from "./components/Login";
 /*
  TODO: Insert your API key below
  */
@@ -60,8 +60,8 @@ export default class ViroSample extends Component {
 
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-
+        {/* <Text>Open up App.js to start working on your app!</Text> */}
+        <LoginScreen />
         {/* <StatusBar style="auto" /> */}
       </View>
     );
