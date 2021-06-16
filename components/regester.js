@@ -18,11 +18,7 @@ import {
   Button,
 } from "native-base";
 
-export default function LoginScreen(props) {
-  const newVal = () => {
-    // 2. do calculations and send it to parent
-    props.handler;
-  };
+export default function RegisterScreen() {
   return (
     <View style={{ flex: 1, justifyContent: "center" }}>
       <Text
@@ -34,7 +30,7 @@ export default function LoginScreen(props) {
           marginTop: 75,
         }}
       >
-        Let's Start
+        Register yourself
       </Text>
 
       <Container style={{ marginTop: 95 }}>
@@ -48,20 +44,9 @@ export default function LoginScreen(props) {
             <Input />
           </Item>
           <Button
-            warning
-            transparent
-            bordered
-            style={{ alignSelf: "center", marginTop: 60, marginBottom: 20 }}
-          >
-            <Text>Login</Text>
-          </Button>
-          <Button
             danger
             transparent
             bordered
-            onPress={() => {
-              newVal();
-            }}
             style={{ alignSelf: "center", marginTop: 60, marginBottom: 20 }}
           >
             <Text>Register</Text>

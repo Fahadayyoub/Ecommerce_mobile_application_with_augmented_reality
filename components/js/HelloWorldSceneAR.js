@@ -1,8 +1,6 @@
 "use strict";
 
 import React, { Component } from "react";
-import { View } from "react-native";
-import { Button } from "react-native";
 
 import { StyleSheet } from "react-native";
 
@@ -25,7 +23,7 @@ export default class HelloWorldSceneAR extends Component {
     return (
       <ViroARScene onTrackingUpdated={this._onInitialized}>
         <ViroText
-          text={this.props.arSceneNavigator.viroAppProps}
+          text={this.state.text}
           scale={[0.5, 0.5, 0.5]}
           position={[0, 0, -1]}
           style={styles.helloWorldTextStyle}
@@ -37,7 +35,7 @@ export default class HelloWorldSceneAR extends Component {
   _onInitialized(state, reason) {
     if (state == ViroConstants.TRACKING_NORMAL) {
       this.setState({
-        text: "Fahad",
+        text: "Hello World!",
       });
     } else if (state == ViroConstants.TRACKING_NONE) {
       // Handle loss of tracking
