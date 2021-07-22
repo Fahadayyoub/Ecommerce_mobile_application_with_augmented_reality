@@ -58,9 +58,10 @@ export default class ViroSample extends Component {
     this.state = {
       navigatorType: defaultNavigatorType,
       sharedProps: sharedProps,
-      currentScreen: "Login",
+      currentScreen: "HomeScreen",
       // currentScreen: "djij",
-      viroText: "Jazba",
+      viroText: "Display text",
+      // responseServer: "nsjcnsc",
     };
     this.handler = this.handler.bind(this);
     this._getExperienceSelector = this._getExperienceSelector.bind(this);
@@ -114,6 +115,7 @@ export default class ViroSample extends Component {
                 warning
                 transparent
                 bordered
+                onPress={{}}
                 style={{ alignSelf: "center", marginTop: 60, marginBottom: 20 }}
               >
                 <Text>Login</Text>
@@ -124,7 +126,7 @@ export default class ViroSample extends Component {
                 bordered
                 onPress={() => {
                   this.setState({
-                    currentScreen: "Register",
+                    currentScreen: "HomeScreen",
                   });
                 }}
                 style={{ alignSelf: "center", marginTop: 60, marginBottom: 20 }}
@@ -165,10 +167,38 @@ export default class ViroSample extends Component {
                 transparent
                 bordered
                 style={{ alignSelf: "center", marginTop: 60, marginBottom: 20 }}
+                onPress={() => {
+                  this.setState({
+                    currentScreen: "Login",
+                  });
+                  const requestOptions = {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      title: "React POST Request Example",
+                      name: "Fahad",
+                      password: "123",
+                      address: "asdczxc",
+                    }),
+                  };
+                  fetch(
+                    "http://192.168.1.104/work/mobile.php/register",
+                    requestOptions
+                  ).then((response) => {
+                    // this.setState = {
+                    //   responseServer: "scsdcd",
+                    // };
+                    // console.log(response);
+                  });
+                  // .then((data) => {
+
+                  // });
+                }}
               >
                 <Text>Register</Text>
               </Button>
             </Form>
+            {/* <Text>{this.state.responseServer}</Text> */}
           </Container>
         </View>
       );

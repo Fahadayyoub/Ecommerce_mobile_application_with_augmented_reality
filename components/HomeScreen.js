@@ -74,22 +74,6 @@ export default function HomeScreen() {
           <Button
             full
             onPress={() => {
-              setScreen("Profile");
-            }}
-          >
-            <Image
-              style={{
-                alignSelf: "center",
-              }}
-              source={require("../assets/person.png")}
-            />
-            <Text>Profile</Text>
-          </Button>
-        </FooterTab>
-        <FooterTab>
-          <Button
-            full
-            onPress={() => {
               setScreen("Home");
             }}
           >

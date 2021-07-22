@@ -25,21 +25,18 @@ export default function Product(props) {
   const [counter, setCounter] = useState(0);
   return (
     <View>
-      {/* <Text>{props.counter}</Text>
-      <Text>{JSON.stringify(props.cart)}</Text> */}
       {props.todos.map((todo, index) => {
         return (
           <View
             style={{
               flex: 1,
               flexDirection: "column",
-              marginTop: 25,
             }}
           >
             <View style={{ flex: 1, alignSelf: "center" }}>
               <Image
                 style={styles.ImageStyle}
-                source={require("../assets/87.png")}
+                source={require("../assets/ball.png")}
               />
               <View>
                 <Text

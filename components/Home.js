@@ -26,21 +26,45 @@ export default function HomeScreen(props) {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: "This is first list",
+      title: "Fifa ball",
       price: 25,
       disabled: false,
+      image: "../assets/87.png",
     },
     {
       id: 2,
-      title: "This is second list",
+      title: "Foot Ball",
       price: 50,
       disabled: false,
+      image: "../assets/87.png",
     },
     {
       id: 3,
-      title: "This is third list",
+      title: "Ball",
       price: 100,
       disabled: false,
+      image: "../assets/87.png",
+    },
+    {
+      id: 1,
+      title: "Basket ball",
+      price: 25,
+      disabled: false,
+      image: "../assets/87.png",
+    },
+    {
+      id: 2,
+      title: "uefaball",
+      price: 50,
+      disabled: false,
+      image: "../assets/87.png",
+    },
+    {
+      id: 3,
+      title: "New Ball",
+      price: 100,
+      disabled: false,
+      image: "../assets/87.png",
     },
   ]);
 

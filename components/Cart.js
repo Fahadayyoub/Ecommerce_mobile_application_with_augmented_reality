@@ -31,12 +31,12 @@ export default function Cart(props) {
         style={{
           textAlign: "center",
           fontSize: 58,
-          color: "#FF4500",
+          color: "#1a1a1a",
           marginBottom: 50,
           marginTop: 30,
         }}
       >
-        My Cart
+        Cart
       </Text>
       <View
         style={{
